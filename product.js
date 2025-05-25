@@ -101,7 +101,7 @@ const logoButton = document.querySelector("#button-logo");
 const backButton = document.querySelector(".back-button");
 
 logoButton?.addEventListener("click", () => {
-  window.location.href = "home.html";
+  window.location.href = "index.html";
 });
 
 backButton?.addEventListener("click", () => {
