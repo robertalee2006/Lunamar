@@ -13,7 +13,7 @@ document.querySelectorAll("button[id^='bikini-top']").forEach((btn) => {
 
 // Redirect logo button to home page
 logoButton.addEventListener("click", () => {
-  window.location.href = "home.html";
+  window.location.href = "index.html";
 });
 
 // Redirect fish button to bottoms page
