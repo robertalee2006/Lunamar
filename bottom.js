@@ -5,7 +5,7 @@ const logoButton = document.querySelector("#button-logo");
 const fishButton = document.querySelector("#fish-button");
 
 logoButton?.addEventListener("click", () => {
-  window.location.href = "home.html";
+  window.location.href = "index.html";
 });
 
 fishButton?.addEventListener("click", () => {
