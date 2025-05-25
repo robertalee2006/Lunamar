@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #c1f2ee;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 350px;
+  height: auto;
+}
+
+.home-assets {
+  min-height: 100vh;
+  flex-direction: column; /*stack vertically*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.shop-button {
+  flex-direction: column; /*stack vertically*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-button {
+  flex-direction: column; /*stack vertically*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big-logo :hover {
+  filter: drop-shadow(8px 8px 50px #ffdd92);
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+
+.shop-and-contact-buttons button {
+  background: none;
+  border: none;
+  margin: 7px;
+  padding: 0px;
+  cursor: pointer;
+}
+
+.shop-and-contact-buttons > :hover {
+  filter: drop-shadow(8px 8px 50px #ffc063);
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+
+.shop-and-contact-buttons img {
+  flex-direction: row; /*stack vertically*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  margin: 10px;
+}
+
+.shop-and-contact-buttons {
+  display: flex;
+  flex-direction: row; /* align shop and contact side-by-side */
+}
+
+#shop-label {
+  width: 64px;
+}
