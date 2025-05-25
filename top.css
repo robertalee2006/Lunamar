@@ -6,7 +6,7 @@ body {
   background-color: #fef3f9;
   background-image: url(Assets/shop-bkgd.png);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
 }
 
@@ -17,6 +17,17 @@ img {
 
 .hidden {
   display: none;
+}
+
+.shipping {
+  color: #9b6d7d;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 1;
+  font-style: italic;
 }
 
 @keyframes heartbeat {
@@ -64,12 +75,12 @@ img {
 .top-bottom-label {
   position: fixed;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 20px; /* changed from left: 50% */
+  transform: none; /* remove horizontal centering */
   display: flex;
-  flex-direction: column; /* Stack vertically */
+  flex-direction: column;
   align-items: center;
-  gap: 50px; /* space between items */
+  gap: 20px;
   z-index: 1000;
 }
 
@@ -98,11 +109,11 @@ img {
   transition: 0.3s ease;
 }
 
-#collection-component-1748156694952 {
+#collection-component-1748199136355 {
+  height: 135vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 85vh;
 }
 
 #bikini-top-1,
