@@ -27,6 +27,18 @@ img {
   display: none;
 }
 
+#product-component-1748151952584 {
+  position: fixed; /* or absolute, depending on use-case */
+  bottom: 20px; /* space from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it stays on top */
+  margin-bottom: 50px;
+}
+
 .scaled-down {
   width: 400px;
   height: auto;
@@ -60,12 +72,12 @@ img {
 .back-button {
   position: fixed;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 20px; /* changed from left: 50% */
+  transform: none; /* remove horizontal centering */
   display: flex;
-  flex-direction: column; /* Stack vertically */
+  flex-direction: column;
   align-items: center;
-  gap: 20px; /* space between items */
+  gap: 20px;
   z-index: 1000;
 }
 
