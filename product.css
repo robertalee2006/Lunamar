@@ -71,7 +71,7 @@ img {
 }
 
 .back-button {
-  padding-top: 60px;
+  padding-top: 20px;
   bottom: 20px;
   display: flex;
   flex-direction: column;
