@@ -124,3 +124,12 @@ img {
   background: none;
   border: none;
 }
+
+#large-view {
+  right: 50px;
+  padding-bottom: 200px;
+  margin: -40px;
+  height: 107px;
+  position: fixed;
+  cursor: pointer;
+}

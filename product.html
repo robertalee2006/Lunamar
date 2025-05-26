@@ -29,10 +29,16 @@
 
     <div class="product-information">
       <h1 id="product-name">Loading...</h1>
-      <h2 id="product-size">2XS - L</h2>
-      <img id="product-image" alt="Product Image" />
-      <h2><strong>Price: </strong><span id="product-price"></span></h2>
-      <h2 id="product-description"></h2>
+      <h2 id="product-size">Sizes: 2XS - L</h2>
+      <img
+        id="slideshow-image"
+        src="pink-gingham-front.png"
+        alt="Bikini Product"
+        class="scaled-down"
+      />
+
+      <h2><strong>Price: </strong><span id="product-price">$0.00</span></h2>
+      <h2 id="product-description">Description loading...</h2>
     </div>
 
     <div id="product-component-1748151952584"></div>
@@ -45,6 +51,137 @@
       </button>
     </div>
 
-    <script src="product.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const products = [
+          {
+            id: "bikini-top-1",
+            name: "Abigail Top",
+            size: "2XS - L",
+            description:
+              "Soft cotton with pink gingham pattern, perfect for summer days.",
+            price: 59.99,
+            imageUrl: "pink-gingham-front.png",
+          },
+          {
+            id: "bikini-top-2",
+            name: "Chloe Top",
+            size: "2XS - L",
+            description: "Fresh mint gingham top for a breezy beach vibe.",
+            price: 59.99,
+            imageUrl: "mint-gingham-front.png",
+          },
+          {
+            id: "bikini-top-3",
+            name: "Annabel Top",
+            size: "2XS - L",
+            description: "Moss polka dot design with a classic cut.",
+            price: 59.99,
+            imageUrl: "moss-polka-dot.png",
+          },
+          {
+            id: "bikini-top-4",
+            name: "Sienna Top",
+            size: "2XS - L",
+            description: "Pink polkadot top that adds a playful touch.",
+            price: 59.99,
+            imageUrl: "pink-polkadot.png",
+          },
+          {
+            id: "bikini-top-5",
+            name: "Ruby Top",
+            size: "2XS - L",
+            description: "Random print top with a unique style.",
+            price: 59.99,
+            imageUrl: "random-print-top.png",
+          },
+          {
+            id: "bikini-top-6",
+            name: "Joy Top",
+            size: "2XS - L",
+            description: "Red half polkadot top for a bold look.",
+            price: 59.99,
+            imageUrl: "red-half-polkadot-top.png",
+          },
+          {
+            id: "bikini-bottom-1",
+            name: "Abigail Bottom",
+            size: "2XS - L",
+            description: "Matching pink gingham bottom for a complete look.",
+            price: 39.99,
+            imageUrl: "pink-gingham-bottom.png",
+          },
+          {
+            id: "bikini-bottom-2",
+            name: "Chloe Bottom",
+            size: "2XS - L",
+            description: "Mint gingham bottoms to match your top.",
+            price: 39.99,
+            imageUrl: "mint-gingham-bottom.png",
+          },
+          {
+            id: "bikini-bottom-3",
+            name: "Annabel Bottom",
+            size: "2XS - L",
+            description: "Moss polkadot bottom with classic fit.",
+            price: 39.99,
+            imageUrl: "moss-polkadot-bottom.png",
+          },
+          {
+            id: "bikini-bottom-4",
+            name: "Sienna Bottom",
+            size: "2XS - L",
+            description: "Pink polkadot bottoms, fun and flirty.",
+            price: 39.99,
+            imageUrl: "pink-polkdadot-bottom.png",
+          },
+          {
+            id: "bikini-bottom-5",
+            name: "Ruby Bottom",
+            size: "2XS - L",
+            description: "Random print bottom to mix and match.",
+            price: 59.99,
+            imageUrl: "random-top-bottom.png",
+          },
+          {
+            id: "bikini-bottom-6",
+            name: "Joy Bottom",
+            size: "2XS - L",
+            description: "Red half polkadot bottoms, perfect for summer.",
+            price: 59.99,
+            imageUrl: "red-half-polkadot-bottoms.png",
+          },
+        ];
+
+        let currentIndex = 0;
+
+        const imageElement = document.getElementById("slideshow-image");
+        const nameElement = document.getElementById("product-name");
+        const sizeElement = document.getElementById("product-size");
+        const priceElement = document.getElementById("product-price");
+        const descriptionElement = document.getElementById(
+          "product-description"
+        );
+
+        function updateSlide(index) {
+          const product = products[index];
+          imageElement.src = product.imageUrl;
+          imageElement.alt = product.name;
+          nameElement.textContent = product.name;
+          sizeElement.textContent = `Sizes: ${product.size}`;
+          priceElement.textContent = `$${product.price.toFixed(2)}`;
+          descriptionElement.textContent = product.description;
+        }
+
+        // Initialize first slide
+        updateSlide(currentIndex);
+
+        imageElement.addEventListener("click", () => {
+          currentIndex = (currentIndex + 1) % products.length;
+          updateSlide(currentIndex);
+        });
+      });
+    </script>
   </body>
+  <script src="product.js"></script>
 </html>

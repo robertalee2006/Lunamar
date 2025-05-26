@@ -18,3 +18,9 @@ document.querySelectorAll("button[id^='bikini-bottom-']").forEach((btn) => {
     window.location.href = `product.html?id=${btn.id}`;
   });
 });
+
+const largeViewButton = document.querySelector(`#large-view`);
+
+largeViewButton.addEventListener("click", () => {
+  window.location.href = "product.html";
+});

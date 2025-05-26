@@ -4,6 +4,8 @@
 const logoButton = document.querySelector("#button-logo");
 const fishButton = document.querySelector("#fish-button");
 
+const largeViewButton = document.querySelector(`#large-view`);
+
 // Redirect to product page with ID from clicked button
 document.querySelectorAll("button[id^='bikini-top']").forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -14,6 +16,10 @@ document.querySelectorAll("button[id^='bikini-top']").forEach((btn) => {
 // Redirect logo button to home page
 logoButton.addEventListener("click", () => {
   window.location.href = "index.html";
+});
+
+largeViewButton.addEventListener("click", () => {
+  window.location.href = "product.html";
 });
 
 // Redirect fish button to bottoms page

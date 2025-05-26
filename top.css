@@ -19,6 +19,10 @@ img {
   display: none;
 }
 
+[data-shopify-buy-button-id] {
+  cursor: pointer;
+}
+
 .shipping {
   color: #9b6d7d;
   justify-content: center;
@@ -123,4 +127,20 @@ img {
   cursor: pointer;
   background: none;
   border: none;
+}
+
+.site-header {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+#large-view {
+  right: 50px;
+  padding-bottom: 200px;
+  margin: -40px;
+  height: 107px;
+  position: fixed;
+  cursor: pointer;
 }
